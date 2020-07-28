@@ -17,7 +17,7 @@
     width: 80%;
     min-width: 1200px;
     height: calc(100vh - 40px);
-    background-color: red;
+    background-color: green;
 }
 
 header {
@@ -34,11 +34,38 @@ header {
 aside {
     width: 33%;
     height: 100%;
-    background-color: purple;
+    display: flex;
+    flex-direction: column;
+    /* background-color: purple; */
+}
+
+.notifiche {
+    height: 80px;
+    background-color: red;
+}
+
+.search input {
+    width: 80%;
+}
+
+.users-box {
+    height: 100%;
+    overflow-y: scroll;
+    background-color: gray;
 }
 
 main {
     width: 67%;
-    height: 100%;
     background-color: pink;
+}
+
+.chat-area {
+    height: calc(100% - 70px);
+    overflow-y: scroll;
+    background-color: magenta;
+}
+
+.chat-box {
+    height: 70px;
+    background-color: white;
 }
