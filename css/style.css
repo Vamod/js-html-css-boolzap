@@ -1,9 +1,12 @@
+/*reset*/
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* contenitori */
 .container {
     width: 100vw;
     height: 100vh;
@@ -20,11 +23,33 @@
     background-color: green;
 }
 
+/* inizio header */
 header {
     height: 70px;
+    display: flex;
     background-color: aqua;
 }
 
+.header-left {
+    width: 33%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: tomato;
+}
+
+.header-left > .profile-img > img {
+    height: 90%;
+    border-radius: 50%;
+}
+
+.header-right {
+    width: 67%;
+    height: 100%;
+    background-color: lightblue;
+}
+
+/* fine header */
 .main-box {
     height: calc(100vh - 110px);
     display: flex;
@@ -67,5 +92,8 @@ main {
 
 .chat-box {
     height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: white;
 }
