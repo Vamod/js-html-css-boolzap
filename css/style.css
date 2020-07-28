@@ -20,14 +20,12 @@
     width: 80%;
     min-width: 1200px;
     height: calc(100vh - 40px);
-    background-color: green;
 }
 
-/* inizio header */
+/* --inizio header-- */
 header {
     height: 70px;
     display: flex;
-    background-color: aqua;
 }
 
 .header-left {
@@ -72,21 +70,22 @@ header {
     border-radius: 50%;
 }
 
-/* fine header */
+/* --fine header-- */
 .main-box {
     height: calc(100vh - 110px);
     display: flex;
 
 }
 
-/* inizio aside */
+/* --inizio aside-- */
 
 aside {
     width: 33%;
-    height: 100%;
     display: flex;
     flex-direction: column;
 }
+
+/* area notifica */
 
 .notifiche {
     height: 80px;
@@ -103,30 +102,57 @@ aside {
     color: #8edafc;
 }
 
+/* fine area notifica */
+
+/* inizio area search */
 .search-bar {
+    height: 40px;
     display: flex;
+    align-items: center;
 }
 
 .search-bar > #search {
     background-color: white;
-    padding: 5px 10px;
+    padding: 4px 10px;
     color: #b8bbc0;
 }
 
 .search-bar input {
     width: 100%;
+    height: 26px;
     border: none;
 }
-
-.users-box {
-    height: 100%;
+/* fine area search */
+.friends-box {
     overflow-y: scroll;
-    background-color: gray;
 }
 
-/* fine aside */
+.friend {
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
 
-/* inizio main */
+.friend > .friend-img {
+    height: 90%;
+}
+
+.friend-img img {
+    height: 100%;
+    border-radius: 50%;
+}
+
+.friend-right {
+    width: 100%;
+}
+
+.friend-name-time {
+    display: flex;
+    justify-content: space-between;
+}
+/* --fine aside-- */
+
+/* --inizio main-- */
 
 main {
     width: 67%;
@@ -136,7 +162,9 @@ main {
 .chat-area {
     height: calc(100% - 70px);
     overflow-y: scroll;
-    background-color: magenta;
+    background-image: url('https://wallpaperstock.net/wallpapers/thumbs1/51439hd.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .chat-box {
@@ -150,4 +178,5 @@ main {
 .chat-box > #chat-type {
     width: 90%;
     height: 50px;
+    padding: 0 10px;
 }
