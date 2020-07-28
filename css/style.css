@@ -39,11 +39,21 @@ header {
 
 .header-left > .profile-img {
     height: 90%;
+    margin-left: 15px;
 }
 
 .header-left > .profile-img > img {
     height: 100%;
     border-radius: 50%;
+}
+
+.header-left > .icons-box {
+    color: #b1b1b1;
+    font-size: 24px;
+}
+
+.header-left > .icons-box > i {
+    margin-right: 20px;
 }
 
 .header-right {
@@ -63,6 +73,8 @@ header {
 
 .header-right .chat-img {
     height: 90%;
+    margin-left: 15px;
+    margin-right: 10px;
 }
 
 .header-right .chat-img > img {
@@ -70,6 +82,14 @@ header {
     border-radius: 50%;
 }
 
+.header-right .icons-box {
+    color: #b1b1b1;
+    font-size: 24px;
+}
+
+.header-right .icons-box > i {
+    margin-right: 20px;
+}
 /* --fine header-- */
 .main-box {
     height: calc(100vh - 110px);
@@ -83,6 +103,7 @@ aside {
     width: 33%;
     display: flex;
     flex-direction: column;
+    background-color: white;
 }
 
 /* area notifica */
@@ -91,6 +112,7 @@ aside {
     height: 80px;
     display: flex;
     align-items: center;
+    flex-shrink: 0;
     background-color: #8edafc;
 }
 
@@ -133,6 +155,10 @@ aside {
     align-items: center;
 }
 
+.friend:hover {
+    background-color: #e9ebea;
+}
+
 .friend > .friend-img {
     height: 90%;
 }
@@ -158,7 +184,7 @@ main {
     width: 67%;
     background-color: pink;
 }
-
+/* inizio chat area */
 .chat-area {
     height: calc(100% - 70px);
     overflow-y: scroll;
@@ -167,6 +193,38 @@ main {
     background-repeat: no-repeat;
 }
 
+.friend-chat-container {
+    display: flex;
+}
+
+.my-chat-container{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.bubble {
+    width: 200px;
+    height: 80px;
+    border-radius: 10px;
+}
+
+.friend-chat {
+    background-color: white;
+    margin-left: 100px;
+}
+
+.my-chat {
+    background-color: #d5f9bb;
+    margin-right: 100px;
+}
+
+.friend-chat-container:first-child {
+    margin-top: 60px;
+}
+
+/* fine chat area */
+
+/* inizio chat input */
 .chat-box {
     height: 70px;
     display: flex;
@@ -180,3 +238,5 @@ main {
     height: 50px;
     padding: 0 10px;
 }
+
+/* fine chat input */
