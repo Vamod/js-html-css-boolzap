@@ -13,7 +13,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: blue;
+    background-color: #d9dcd5;
 }
 
 .wrapper {
@@ -34,19 +34,42 @@ header {
     width: 33%;
     height: 100%;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    background-color: tomato;
+    background-color: #eaeaea;
+}
+
+.header-left > .profile-img {
+    height: 90%;
 }
 
 .header-left > .profile-img > img {
-    height: 90%;
+    height: 100%;
     border-radius: 50%;
 }
 
 .header-right {
     width: 67%;
     height: 100%;
-    background-color: lightblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eaeaea;
+}
+
+.chat-profile {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header-right .chat-img {
+    height: 90%;
+}
+
+.header-right .chat-img > img {
+    height: 100%;
+    border-radius: 50%;
 }
 
 /* fine header */
@@ -56,21 +79,43 @@ header {
 
 }
 
+/* inizio aside */
+
 aside {
     width: 33%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    /* background-color: purple; */
 }
 
 .notifiche {
     height: 80px;
-    background-color: red;
+    display: flex;
+    align-items: center;
+    background-color: #8edafc;
 }
 
-.search input {
-    width: 80%;
+.notifiche > .notifica-off {
+    background-color: white;
+    padding: 8px;
+    border-radius: 50%;
+    font-size: 16px;
+    color: #8edafc;
+}
+
+.search-bar {
+    display: flex;
+}
+
+.search-bar > #search {
+    background-color: white;
+    padding: 5px 10px;
+    color: #b8bbc0;
+}
+
+.search-bar input {
+    width: 100%;
+    border: none;
 }
 
 .users-box {
@@ -78,6 +123,10 @@ aside {
     overflow-y: scroll;
     background-color: gray;
 }
+
+/* fine aside */
+
+/* inizio main */
 
 main {
     width: 67%;
@@ -96,4 +145,9 @@ main {
     justify-content: space-between;
     align-items: center;
     background-color: white;
+}
+
+.chat-box > #chat-type {
+    width: 90%;
+    height: 50px;
 }
