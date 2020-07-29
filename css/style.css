@@ -233,39 +233,43 @@ main {
     background-repeat: no-repeat;
 }
 
+.chat-area-margin {
+    width: 100%;
+    height: 100%;
+    margin-top: 60px;
+}
+
 .friend-chat-container {
     display: flex;
 }
 
-.my-chat-container{
-    display: flex;
-    justify-content: flex-end;
-}
-
 .bubble {
-    width: 150px;
+    min-width: 150px;
     height: 60px;
+    margin: 2px 0;
+    padding: 5px;
     border-radius: 10px;
+    text-align: center;
 }
 
 .friend-chat {
     margin-left: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: white;
 }
 
 .my-chat {
     margin-right: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: #d5f9bb;
 }
+/* template */
 
-.friend-chat-container:first-child {
-    margin-top: 60px;
+.my-chat-container{
+    display: none;
+}
+
+.flex-right {
+    display: flex;
+    justify-content: flex-end;
 }
 
 /* fine chat area */
