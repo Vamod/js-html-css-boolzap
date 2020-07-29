@@ -6,11 +6,7 @@
     box-sizing: border-box;
 }
 
-/* generali */
-
-body {
-    font-family: 'Montserrat', sans-serif;
-}
+/* struttura */
 
 .container {
     width: 100vw;
@@ -18,13 +14,31 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     background-color: #d9dcd5;
+    z-index: 1;
+}
+
+.barra-sfondo {
+    width: 100vw;
+    height: 120px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #009788;
+    z-index: -1;
+
 }
 
 .wrapper {
     width: 80%;
     min-width: 1200px;
     height: calc(100vh - 40px);
+}
+
+/* comuni */
+body {
+    font-family: 'Montserrat', sans-serif;
 }
 
 .text-regular {
@@ -158,8 +172,9 @@ aside {
 }
 
 .search-bar input {
-    width: 100%;
+    width: 75%;
     height: 26px;
+
     border: none;
 }
 /* fine area search */
@@ -228,8 +243,8 @@ main {
 }
 
 .bubble {
-    width: 200px;
-    height: 80px;
+    width: 150px;
+    height: 60px;
     border-radius: 10px;
 }
 
@@ -261,13 +276,24 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
+    background-color: #f2f0ec;
+    font-size: 24px;
+    color: #6b7076;
 }
 
 .chat-box > #chat-type {
-    width: 90%;
+    width: 85%;
     height: 50px;
     padding: 0 10px;
+    border: none;
+}
+
+.chat-box > #smile {
+    margin-left: 20px;
+}
+
+.chat-box > #send {
+    margin-right: 20px;
 }
 
 /* fine chat input */
