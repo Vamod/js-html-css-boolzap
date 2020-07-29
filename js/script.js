@@ -15,28 +15,32 @@ $(document).ready(function(){
             el.addClass('flex-right');
 
             // lo aggiungo al document
-
             $('.chat-area-margin').append(el);
+
+            setTimeout(answer, 1000);
         }
-//funzione per stabile l'ora
-        function time(){
-            var d = new Date();
-            var hour = d.getHours();
-            var min = d.getMinutes();
-            var time = hour +':'+ min;
-            return time;
 
-        }
+
+
     }
+            //funzione per stabile l'ora
+            function time(){
+                var d = new Date();
+                var hour = d.getHours();
+                var min = d.getMinutes();
+                var time = hour +':'+ min;
+                return time;
+            }
 
-    setTimeout(answer, 1000);
+            function answer(){
+                var el = $('.friend-chat-container').clone();
+                el.find('.friend-chat-text').append('ok');
+                el.find('.chat-time').append(time());
+                $('.friend-chat-container').addClass('flex-left');
+                $('.chat-area-margin').append(el);
+            }
 
-    function answer(){
-        var el = $('.friend-chat-container').clone();
-        el.find('.friend-chat-text').append('ok');
-        el.find('.chat-time').append(time());
-        $('.friend-chat-container').addClass('flex-left');
-        $('.chat-area-margin').append(el);
-    }
+
+
 
 });
