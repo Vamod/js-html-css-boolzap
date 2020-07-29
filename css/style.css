@@ -6,7 +6,12 @@
     box-sizing: border-box;
 }
 
-/* contenitori */
+/* generali */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
 .container {
     width: 100vw;
     height: 100vh;
@@ -20,6 +25,15 @@
     width: 80%;
     min-width: 1200px;
     height: calc(100vh - 40px);
+}
+
+.text-regular {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.text-small {
+    font-size: 11px;
 }
 
 /* --inizio header-- */
@@ -38,7 +52,7 @@ header {
 }
 
 .header-left > .profile-img {
-    height: 90%;
+    height: 75%;
     margin-left: 15px;
 }
 
@@ -72,7 +86,7 @@ header {
 }
 
 .header-right .chat-img {
-    height: 90%;
+    height: 75%;
     margin-left: 15px;
     margin-right: 10px;
 }
@@ -117,10 +131,12 @@ aside {
 }
 
 .notifiche > .notifica-off {
-    background-color: white;
+    margin-left: 15px;
+    margin-right: 10px;
     padding: 8px;
     border-radius: 50%;
     font-size: 16px;
+    background-color: white;
     color: #8edafc;
 }
 
@@ -131,11 +147,13 @@ aside {
     height: 40px;
     display: flex;
     align-items: center;
+    margin-top: 5px;
 }
 
 .search-bar > #search {
-    background-color: white;
+    margin-left: 15px;
     padding: 4px 10px;
+    background-color: white;
     color: #b8bbc0;
 }
 
@@ -160,7 +178,9 @@ aside {
 }
 
 .friend > .friend-img {
-    height: 90%;
+    height: 75%;
+    margin: 0 15px;
+
 }
 
 .friend-img img {
@@ -176,6 +196,11 @@ aside {
     display: flex;
     justify-content: space-between;
 }
+
+.friend-right .friend-time {
+    margin-right: 10px;
+}
+
 /* --fine aside-- */
 
 /* --inizio main-- */
@@ -209,13 +234,19 @@ main {
 }
 
 .friend-chat {
-    background-color: white;
     margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
 }
 
 .my-chat {
-    background-color: #d5f9bb;
     margin-right: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d5f9bb;
 }
 
 .friend-chat-container:first-child {
