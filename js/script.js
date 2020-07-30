@@ -7,12 +7,10 @@ $(document).ready(function(){
             // prendo il contenuto dell'input
             var valore = $('#chat-type').val();
             // per inserire faccio il clone
-            var el = $('.my-chat-container').clone();
+            var el = $('.template-mine .my-chat-container').clone();
             // ho personalizzato il clone
             el.find('.chat-time').append(time());
             el.find('.my-chat-text').append(valore);
-            //lo rendo visibile aggiungendo display flex
-            el.addClass('flex-right');
 
             // lo aggiungo al document
             $('.chat-area-margin').append(el);
@@ -33,10 +31,9 @@ $(document).ready(function(){
             }
 
             function answer(){
-                var el = $('.friend-chat-container').clone();
+                var el = $('.template-answer .friend-chat-container').clone();
                 el.find('.friend-chat-text').append('ok');
                 el.find('.chat-time').append(time());
-                $('.friend-chat-container').addClass('flex-left');
                 $('.chat-area-margin').append(el);
             }
 
