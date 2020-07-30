@@ -217,6 +217,7 @@ aside {
 
 .friend-right .friend-time {
     margin-right: 10px;
+    font-size: 9px;
 }
 
 /* --fine aside-- */
@@ -264,6 +265,11 @@ main {
     border-radius: 10px;
 }
 
+.my-chat-text,
+.friend-chat-text {
+    margin-bottom: 10px;
+}
+
 .friend-chat {
     background-color: white;
 }
@@ -274,6 +280,7 @@ main {
 
 .chat-time {
     text-align: right;
+    font-size: 10px;
 }
 /* template */
 
