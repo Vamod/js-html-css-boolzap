@@ -245,6 +245,11 @@ main {
     display: flex;
 }
 
+.my-chat-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .bubble {
     min-width: 100px;
     min-height: 40px;
@@ -273,14 +278,9 @@ main {
     width: 100%;
 }
 
-.friend-chat-container {
-    display: flex;
-    justify-content: flex-end;
-}
 
-.my-chat-container {
-    display: flex;
-}
+
+
 
 /* fine chat area */
 
@@ -308,6 +308,7 @@ main {
 
 .chat-box > #send {
     margin-right: 20px;
+    cursor: pointer;
 }
 
 /* fine chat input */

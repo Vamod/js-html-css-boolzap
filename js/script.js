@@ -15,12 +15,27 @@ $(document).ready(function(){
             // lo aggiungo al document
             $('.chat-area-margin').append(el);
 
+            // richiamo funzione automatica di risposta con un secondo di ritardo
             setTimeout(answer, 1000);
         }
-
-
-
     }
+
+    $('#send').click(function(){
+        var valore = $('#chat-type').val();
+        // per inserire faccio il clone
+        var el = $('.template-mine .my-chat-container').clone();
+        // ho personalizzato il clone
+        el.find('.chat-time').append(time());
+        el.find('.my-chat-text').append(valore);
+
+        // lo aggiungo al document
+        $('.chat-area-margin').append(el);
+
+        // richiamo funzione automatica di risposta con un secondo di ritardo
+        setTimeout(answer, 1000);
+    });
+
+
             //funzione per stabile l'ora
             function time(){
                 var d = new Date();
@@ -30,6 +45,7 @@ $(document).ready(function(){
                 return time;
             }
 
+            // funzione di risposta automatica 'ok'
             function answer(){
                 var el = $('.template-answer .friend-chat-container').clone();
                 el.find('.friend-chat-text').append('ok');
