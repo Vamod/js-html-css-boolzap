@@ -188,9 +188,10 @@ aside {
     height: 80px;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
-.friend:hover {
+.friend.active {
     background-color: #e9ebea;
 }
 
@@ -236,9 +237,14 @@ main {
 }
 
 .chat-area-margin {
-    width: 80%;
+    display: none;
+    width: 70%;
     height: 100%;
     margin: 60px auto 0;
+}
+
+.chat-area-margin.active {
+    display: block;
 }
 
 .friend-chat-container {
@@ -254,9 +260,8 @@ main {
     min-width: 100px;
     min-height: 40px;
     margin: 2px 0;
-    padding: 8px;
+    padding: 10px;
     border-radius: 10px;
-    text-align: center;
 }
 
 .friend-chat {

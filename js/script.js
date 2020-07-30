@@ -5,7 +5,7 @@ $(document).ready(function(){
 
 
 
-    // al click su senda invia il messaggio
+    // al click su send invia il messaggio
     $('#send').click(function(){
         var valore = $('#chat-type').val();
         // per inserire faccio il clone
@@ -21,8 +21,22 @@ $(document).ready(function(){
         setTimeout(answer, 1000);
     });
 
+    //per selezionare la chat
+    $('.friend').click(function(){
+        //prendo posizione dei contatti sulla sx
+        var posizione = $(this).index();
+        console.log(posizione);
+        //rimuovo classe active
+        $('.chat-area .chat-area-margin').removeClass('active');
+        //aggiungo la classe active alla chat di indice selezionato dai contatti
+        $('.chat-area .chat-area-margin').eq(posizione).addClass('active');
+        $('.friend').removeClass('active');
+        $('.friend').eq(posizione).addClass('active');
 
-    // funzione myMessage
+
+    });
+
+    // funzione myMessage per inviare msg
     function myMessage(){
         if (event.which == 13 || event.keyCode == 13) {
             // prendo il contenuto dell'input
@@ -58,8 +72,6 @@ $(document).ready(function(){
                 el.find('.chat-time').append(time());
                 $('.chat-area-margin').append(el);
             }
-
-
 
 
 });
