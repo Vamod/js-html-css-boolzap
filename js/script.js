@@ -15,7 +15,7 @@ $(document).ready(function(){
         // aggiungo il valore alla chat
         el.find('.my-chat-text').append(valore);
         // lo aggiungo al document
-        $('.chat-area-margin').append(el);
+        $('.chat-area-margin.active').append(el);
 
         // richiamo funzione automatica di risposta con un secondo di ritardo
         setTimeout(answer, 1000);
@@ -41,17 +41,20 @@ $(document).ready(function(){
         if (event.which == 13 || event.keyCode == 13) {
             // prendo il contenuto dell'input
             var valore = $('#chat-type').val();
+            //aggiungo controllo se il messaggio è vuoto non inviarlo
+            if(valore != ''){
             // per inserire faccio il clone
             var el = $('.template-mine .my-chat-container').clone();
             // ho personalizzato il clone
             el.find('.chat-time').append(time());
             // aggiungo il valore alla chat
             el.find('.my-chat-text').append(valore);
-            // lo aggiungo al document
-            $('.chat-area-margin').append(el);
+            //lo aggiungo al DOM
+            $('.chat-area-margin.active').append(el);
 
             // richiamo funzione automatica di risposta con un secondo di ritardo
             setTimeout(answer, 1000);
+            }
         }
     }
             //funzione per stabile l'ora
@@ -59,7 +62,13 @@ $(document).ready(function(){
                 var d = new Date();
                 var hour = d.getHours();
                 var min = d.getMinutes();
-                var time = hour +':'+ min;
+                if(min < 10){
+                    //aggiungo lo zero quando i minuti sono meno di 10
+                    var time = hour + ':' + '0' + min;
+                } else {
+                    time = hour +':'+ min;
+                }
+
                 return time;
             }
 
@@ -70,7 +79,8 @@ $(document).ready(function(){
                 var el = $('.template-answer .friend-chat-container').clone();
                 el.find('.friend-chat-text').append('ok');
                 el.find('.chat-time').append(time());
-                $('.chat-area-margin').append(el);
+                $('.chat-area-margin.active').append(el);
+
             }
 
 
