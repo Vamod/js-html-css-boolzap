@@ -29,6 +29,10 @@ $(document).ready(function(){
         var attribute = $('.friend.active > .friend-img > img').attr('src');
         // cambio il valore di attribute all'immagine della chat
         $('.chat-img img').attr('src', attribute);
+        //creo variabile nome della chat
+        var nomeChat = $('.friend.active .friend-name').text();
+        //aggiungo nome della chat attiva al header
+        $('#user-name').text(nomeChat);
 
     });
 
