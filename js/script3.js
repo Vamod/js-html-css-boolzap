@@ -24,15 +24,18 @@ $(document).ready(function(){
         // tolgo la classe .active
         $('.friend').removeClass('active');
         $('.friend').eq(posizione).addClass('active');
-
-
+        var attribute = $('.friend.active > .friend-img > img').attr('src');
+        console.log(attribute);
+        $('.chat-img img').attr('src', attribute);
     });
+
 
 //*************funzioni**************
 
     // funzione myMessage per inviare msg
 
     function myMessage(){
+
             // prendo il contenuto dell'input
             var valore = $('#chat-type').val();
             //aggiungo controllo se il messaggio è vuoto non inviarlo
