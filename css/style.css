@@ -268,6 +268,8 @@ main {
 .my-chat-text,
 .friend-chat-text {
     margin-bottom: 10px;
+    word-wrap: break-word;
+
 }
 
 .friend-chat {

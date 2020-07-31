@@ -1,30 +1,17 @@
 $(document).ready(function(){
 // alla pressione di enter invio il messaggio
-    $('#chat-type').keydown(myMessage);
-
-
-
+    $('#chat-type').keydown(function(){
+        if (event.which == 13 || event.keyCode == 13){
+            myMessage();
+        }
+    });
 
     // al click su send invia il messaggio
     $('#send').click(function(){
-        //prendo valore input
-        var valore = $('#chat-type').val();
-        //controllo che il messaggio non sia vuoto
-        if (valore != '') {
-        // per inserire faccio il clone
-        var el = $('.template-mine .my-chat-container').clone();
-        // ho personalizzato il clone
-        el.find('.chat-time').append(time());
-        // aggiungo il valore alla chat area
-        el.find('.my-chat-text').append(capitalize(valore));
-
-        // lo aggiungo al document .active
-        $('.chat-area-margin.active').append(el);
-
-        // richiamo funzione automatica di risposta con un secondo di ritardo
-        setTimeout(answer, 1000);
-        }
+        myMessage();
     });
+
+
 
     //per selezionare la chat
     $('.friend').click(function(){
@@ -46,7 +33,6 @@ $(document).ready(function(){
     // funzione myMessage per inviare msg
 
     function myMessage(){
-        if (event.which == 13 || event.keyCode == 13) {
             // prendo il contenuto dell'input
             var valore = $('#chat-type').val();
             //aggiungo controllo se il messaggio è vuoto non inviarlo
@@ -61,7 +47,7 @@ $(document).ready(function(){
             $('.chat-area-margin.active').append(el);
             // richiamo funzione automatica di risposta con un secondo di ritardo
             setTimeout(answer, 1000);
-            }
+
         }
     }
             //funzione per stabile l'ora
