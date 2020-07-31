@@ -23,10 +23,13 @@ $(document).ready(function(){
         $('.chat-area .chat-area-margin').eq(posizione).addClass('active');
         // tolgo la classe .active
         $('.friend').removeClass('active');
+        //aggiungo classe active all'oggeto selezionato
         $('.friend').eq(posizione).addClass('active');
+        // prendo il valore attributo di src e lo memorizzo in una variabilw
         var attribute = $('.friend.active > .friend-img > img').attr('src');
-        console.log(attribute);
+        // cambio il valore di attribute all'immagine della chat
         $('.chat-img img').attr('src', attribute);
+
     });
 
 
@@ -50,7 +53,6 @@ $(document).ready(function(){
             $('.chat-area-margin.active').append(el);
             // richiamo funzione automatica di risposta con un secondo di ritardo
             setTimeout(answer, 1000);
-
         }
     }
             //funzione per stabile l'ora
@@ -82,8 +84,11 @@ $(document).ready(function(){
                     'Sono in riunione',
                     'Ti piace javascript?'
                 ];
+
                 var indice = numeriRandom(0, frasiRandom.length - 1);
                 el.find('.friend-chat-text').append(frasiRandom[indice]);
+                //aggiungo il testo della chat nella preview di sx
+                $('.friend.active .friend-text').text(frasiRandom[indice]);
                 el.find('.chat-time').append(time());
                 $('.chat-area-margin.active').append(el);
 
