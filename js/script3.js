@@ -13,7 +13,7 @@ $(document).ready(function(){
 
 
 
-    //per selezionare la chat
+    //per selezionare la chat attiva
     $('.friend').click(function(){
         //prendo posizione dei contatti sulla sx
         var posizione = $(this).index();
@@ -36,6 +36,15 @@ $(document).ready(function(){
 
     });
 
+    //ricerca utenti
+    $('#search').keyup(function(){
+        var testo = $(this).val().toLowerCase();
+        $('.friend').filter(function(){
+            $(this).toggle($(this).text().toLowerCase().indexOf(testo) > -1)
+        });
+
+
+    });
 
 //*************funzioni**************
 
